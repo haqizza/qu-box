@@ -1,0 +1,127 @@
+$primaryColor: #73928d;
+$secondaryColor: #315659;
+$tertiaryColor: #4f4f4f;
+$white: #FFFFFF;
+$black: #000000;
+
+@import "utils";
+@import "burger";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+}
+
+.title-big{
+    font-family: 'Pacifico';
+    color: $white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.title{
+    font-family: 'Pacifico';
+    color: $white;
+    font-size: 6vw;
+    text-align: center;
+}
+
+.landing-page-cover{
+    height: 80vh;
+    background-color: $primaryColor;
+    border-radius: 0 0 20px 20px;
+    @include shadow;
+}
+
+.header{
+  padding: 20px;
+  @include flex-row;
+  @include shadow;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-slot{
+  text-align: left;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+}
+
+.burger {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  z-index: 100;
+  cursor: pointer;
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: $secondaryColor;
+  }
+  
+  .open {
+    background-color: $primaryColor;
+  }
+}
+
+.button{
+  padding: 10px;
+  background-color: $secondaryColor;
+  width: 100%;
+  color: $white;
+  border-radius: 8px;
+  border: none;
+}
+
+.button:hover{
+  background-color: $tertiaryColor;
+}
+
+.button-secondary{
+  padding: 10px;
+  background-color: $primaryColor;
+  width: 100%;
+  color: $white;
+  border: $secondaryColor solid 2px;
+  border-radius: 8px;
+}
+
+.button-secondary:hover{
+  background-color: $tertiaryColor;
+  border: $secondaryColor solid 2px;
+}
+
+.input{
+  width: 100%;
+  padding: 10px 0;
+  color: $primaryColor;
+  border: $secondaryColor solid 2px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .title-big{
+    font-size: 4rem;
+  }
+  .title{
+    font-size: 1.25rem;
+  }
+  .button, .button-secondary {
+    width: 150px;
+  }
+  .header{
+    background-color: $secondaryColor;
+    border-radius: 0 0 5px 5px;
+  }
+}

@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&family=Pacifico);
+
+@mixin flex-row{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin shadow{
+  box-shadow: 0px 2px 4px 0px #00000040;
+}
+
+.shadow{
+  @include shadow;
+}
+
+.flex-column{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.space-evenly{
+  justify-content: space-evenly;
+}
+
+.flex-row{
+  @include flex-row;
+}
+
+.container-60{
+  width: 60%;
+  margin: auto;
+}
+
+.margin-y30{
+  margin: 30px 0;
+}
+
+.margin-y10{
+  margin: 10px 0;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.align-item-center{
+  align-items: center;
+}
+
+.color-secondary{
+  color: $tertiaryColor;
+}
+
+.width-100{
+  width: 100%;
+}
+
+.width-80{
+  width: 80%;
+}
+
+.white{
+  color: $white;
+}
