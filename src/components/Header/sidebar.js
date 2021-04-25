@@ -1,6 +1,7 @@
 import React from 'react';
 import Burger from './burger'
 import { slide as Menu } from 'react-burger-menu';
+import Logo from './cross.svg';
 
 const SideBar = (props) => {
 
@@ -8,7 +9,7 @@ const SideBar = (props) => {
     <Menu
       pageWrapId="page-wrap"
       customBurgerIcon={ <Burger/> }
-      customCrossIcon={ <img src="./cross.svg" alt="Cross icon" /> }
+      customCrossIcon={ <img src={ Logo } alt="Cross icon" /> }
       width="100%"
     >
       <a id="home" className="menu-item white" href="/">Home</a>

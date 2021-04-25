@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './ThemeSelector'
 import ThemeSelector from './ThemeSelector';
+import { CookiesProvider } from 'react-cookie';
 
 ReactDOM.render(
   // <React.StrictMode>
-  <ThemeSelector>
-    <App />
-  </ThemeSelector>,
+  <CookiesProvider>
+    <ThemeSelector>
+      <App />
+    </ThemeSelector>
+  </CookiesProvider>,
   // </React.StrictMode>,
   document.getElementById('root')
 );

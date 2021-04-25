@@ -33,11 +33,30 @@ a{
     text-align: center;
 }
 
+.box-title{
+  color: $white;
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+
+.box-code{
+  color: $white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0 0 20px 0;
+}
+
 .landing-page-cover{
     height: 80vh;
     background-color: $primaryColor;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 15px 15px;
     @include shadow;
+  }
+
+.box-cover{
+  background-color: $primaryColor;
+  border-radius: 0 0 15px 15px;
+  @include shadow;
 }
 
 .header{
@@ -117,10 +136,20 @@ a{
   .title{
     font-size: 1.25rem;
   }
+  .box-title{
+    color: $white;
+    font-size: 2.25rem;
+  }
+  .box-code{
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
   .button, .button-secondary {
     width: 150px;
   }
   .header{
+    padding: 20px 50px;
     background-color: $secondaryColor;
     border-radius: 0 0 5px 5px;
   }

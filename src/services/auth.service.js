@@ -2,27 +2,28 @@ import axios from 'axios';
 
 const API_URL = '/api/auth/';
 
-const AuthService = () => {
-  const login = async (username, password) => {
-    const response = await axios
-      .post(API_URL + '/login', {
+class AuthService{
+  login(username, password){
+    return axios
+      .post(API_URL + 'login', {
         username,
         password
+      })
+      .then(response => {
+        if (response.data.accessToken) {
+          localStorage.setItem('user', JSON.stringify(response.data));
+        }
+        return response.data;
       });
-    if (response.data.accessToken) {
-      localStorage.setItem('user', JSON.stringify(response.data));
-    }
-    return response.data;
   }
 
-  const logout = () => {
+  logout(){
     localStorage.removeItem("user");
   }
 
-  const getCurrentUser = () => {
+  getCurrentUser(){
     return JSON.parse(localStorage.getItem("user"));
   }
 }
 
-
-export default AuthService;
+export default new AuthService();

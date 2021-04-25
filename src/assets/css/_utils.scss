@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto&family=Pacifico);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:200,300,400,500);
+@import url(https://fonts.googleapis.com/css2?family=Pacifico);
 
 @mixin flex-row{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
 @mixin shadow{
@@ -30,8 +31,16 @@
   @include flex-row;
 }
 
+.border-000-2{
+  border: solid #000000 1px !important;
+}
+
 .container-60{
   width: 60%;
+  margin: auto;
+}
+.container-80{
+  width: 80%;
   margin: auto;
 }
 
@@ -62,7 +71,18 @@
 .width-80{
   width: 80%;
 }
+.width-50{
+  width: 50%;
+}
 
 .white{
   color: $white;
+}
+
+.padding-y20{
+  padding: 20px 0;
+}
+
+.margin-y20{
+  margin: 20px 0;
 }

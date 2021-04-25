@@ -1,12 +1,15 @@
 import React from 'react';
-import LandingPagelayout from '../../components/LandingPage/Layout'
-import LoginForm from '../../components/Login/loginForm'
+import { useHistory } from 'react-router';
+import DefaultLayout from '../../components/Layout/Default';
+import LoginForm from '../../components/Login/loginForm';
 
 const Login = () => {
+  const history = useHistory();
   return(
-    <LandingPagelayout>
-      <LoginForm/>
-    </LandingPagelayout>
+    <DefaultLayout>
+      <LoginForm history={ history }>
+      </LoginForm>
+    </DefaultLayout>
   )
 };
 

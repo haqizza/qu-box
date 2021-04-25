@@ -1,12 +1,16 @@
-import axios from 'axios';
-import authHeader from './auth-header';
+// import axios from 'axios';
+// import authHeader from './auth-header';
 
-const API_URL = '/api/auth/';
+// const API_URL = '/api/auth/';
 
-const UserService = () => {
-  const getAdminBoard = () => {
-    return axios.get(API_URL + 'admin', { headers: authHeader() })
+class UserService{
+  setUser(boxId){
+    localStorage.setItem('boxId', boxId["boxId"]);
+  }
+
+  getBoxInfo(){
+    return JSON.parse(localStorage.getItem('boxInfo'));
   }
 }
 
-export default UserService;
+export default new UserService();

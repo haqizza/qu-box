@@ -1,14 +1,14 @@
 import React from 'react';
 import SideBar from './sidebar';
-import { MobileView } from "react-device-detect";
+import { MobileView, BrowserView } from "react-device-detect";
 
 const Header = (props) => {
   return(
     <div id="header-container">
       <div id="header" className="header">
         <div className="header-slot flex-row space-between">
-          <div class="title">
-            {props.title}
+          <div className="title">
+            { props.title }
           </div>
           { props.children }
           <MobileView>
@@ -16,7 +16,7 @@ const Header = (props) => {
           </MobileView>
         </div>
       </div>
-      {props.roomInfo}
+      { props.roomInfo }
     </div>
   )
 }

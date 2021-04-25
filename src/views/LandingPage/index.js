@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingPagelayout from '../../components/LandingPage/Layout';
+import DefaultLayout from '../../components/Layout/Default';
 import EnterRoom from '../../components/EnterRoom';
 import { BrowserView } from 'react-device-detect';
 import Button from '../../components/button';
@@ -22,11 +22,11 @@ const LandingPage = (props) => {
     </BrowserView>
   );
   return (
-    <LandingPagelayout
+    <DefaultLayout
       headerContent={ headerContent }
     >
-      <EnterRoom action={ loginAsAdmin } />
-    </LandingPagelayout>
+      <EnterRoom loginAction={ loginAsAdmin } />
+    </DefaultLayout>
   )
 }
 

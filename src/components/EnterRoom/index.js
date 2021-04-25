@@ -22,7 +22,7 @@ const EnterRoom = (props) => {
           id = 'adminLogin'
           className = 'button-secondary margin-y10'
           title = 'Login as Admin'
-          action={ props.action }
+          action={ props.loginAction }
         />
       </MobileView>
     </div>
